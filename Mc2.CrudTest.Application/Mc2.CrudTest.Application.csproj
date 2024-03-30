@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Queries\" />
+    <PackageReference Include="LetPortal.Core" Version="0.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mc2.CrusTest.Domain\Mc2.CrudTest.Domain.csproj" />
   </ItemGroup>
 
 </Project>

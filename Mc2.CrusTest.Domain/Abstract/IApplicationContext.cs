@@ -3,7 +3,7 @@
 namespace Mc2.CrudTest.Domain.Abstract
 {
     using Entities;
-    internal interface IApplicationContext
+    public interface IApplicationContext
     {
         DbSet<Customer> Customers { get; set; } 
         Task<int> SaveChanges();

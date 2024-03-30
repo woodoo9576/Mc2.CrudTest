@@ -8,7 +8,7 @@ using Mc2.CrudTest.Domain.Common.Entities;
 
 namespace Mc2.CrudTest.Domain.Entities
 {
-    internal class Customer : BaseEntity
+    public class Customer : BaseEntity
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
