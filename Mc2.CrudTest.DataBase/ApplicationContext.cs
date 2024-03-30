@@ -11,17 +11,24 @@ namespace Mc2.CrudTest.DataBase
 {
     internal class ApplicationContext : DbContext,IApplicationContext
     {
-        private DbSet<Customer> _customers;
-
-        public DbSet<Customer> Customers
+        public ApplicationContext(DbContextOptions options) : base(options)
         {
-            get => _customers;
-            set => _customers = value;
         }
+        public DbSet<Customer> Customers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=:memory:");
+        }
+
+
+
+        protected override void OnModelCreating(ModelBuilder m)
+        {
+            m.Entity<Customer>().HasKey(x => x.Id);
+            m.Entity<Customer>().HasIndex(c => new { c.FirstName, c.LastName, c.DateOfBirth }).IsUnique();
+
+
         }
 
         public async Task<int> SaveChanges()
