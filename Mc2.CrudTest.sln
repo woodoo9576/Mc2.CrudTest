@@ -3,13 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Presentation.Server", "Mc2.CrudTest.Presentation\Server\Mc2.CrudTest.Presentation.Server.csproj", "{D2AD2F7D-C1E0-4C84-A2A4-6900CED15599}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Presentation.Server", "Mc2.CrudTest.Presentation\Server\Mc2.CrudTest.Presentation.Server.csproj", "{D2AD2F7D-C1E0-4C84-A2A4-6900CED15599}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Presentation.Client", "Mc2.CrudTest.Presentation\Client\Mc2.CrudTest.Presentation.Client.csproj", "{817C1B83-0CAC-4345-A0BE-5CCF30B15C26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Presentation.Client", "Mc2.CrudTest.Presentation\Client\Mc2.CrudTest.Presentation.Client.csproj", "{817C1B83-0CAC-4345-A0BE-5CCF30B15C26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Presentation.Shared", "Mc2.CrudTest.Presentation\Shared\Mc2.CrudTest.Presentation.Shared.csproj", "{D6F1EC1A-CE1D-4E6D-B61D-07033DD442BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Presentation.Shared", "Mc2.CrudTest.Presentation\Shared\Mc2.CrudTest.Presentation.Shared.csproj", "{D6F1EC1A-CE1D-4E6D-B61D-07033DD442BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.AcceptanceTests", "Mc2.CrudTest.AcceptanceTests\Mc2.CrudTest.AcceptanceTests.csproj", "{6776DF76-1054-486C-A79A-57100C47032F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.AcceptanceTests", "Mc2.CrudTest.AcceptanceTests\Mc2.CrudTest.AcceptanceTests.csproj", "{6776DF76-1054-486C-A79A-57100C47032F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DE86CB0E-334E-45F2-A0A3-11DFE4ECC2F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Application", "Mc2.CrudTest.Application\Mc2.CrudTest.Application.csproj", "{6BFF827D-5D68-41F0-BE27-E6FB6697DCF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Domain", "Mc2.CrusTest.Domain\Mc2.CrudTest.Domain.csproj", "{07080C9A-246C-4F9F-8FCD-2CC1AAC3C1B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfraStructure", "InfraStructure", "{B3935EAD-8F14-4D22-A7F6-5AC62A794902}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{446C4A88-498F-4AFF-BB0B-89900FB31D61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E2FE2C50-39F6-4E9E-AD68-2733B2D0CE4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8C7C417F-4A19-4C7B-9D4E-53B1ED0C694C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.DataBase", "Mc2.CrudTest.DataBase\Mc2.CrudTest.DataBase.csproj", "{7662DDA4-106A-4D44-B3FC-42F9BF59C43A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +49,34 @@ Global
 		{6776DF76-1054-486C-A79A-57100C47032F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6776DF76-1054-486C-A79A-57100C47032F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6776DF76-1054-486C-A79A-57100C47032F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BFF827D-5D68-41F0-BE27-E6FB6697DCF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BFF827D-5D68-41F0-BE27-E6FB6697DCF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BFF827D-5D68-41F0-BE27-E6FB6697DCF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BFF827D-5D68-41F0-BE27-E6FB6697DCF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07080C9A-246C-4F9F-8FCD-2CC1AAC3C1B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07080C9A-246C-4F9F-8FCD-2CC1AAC3C1B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07080C9A-246C-4F9F-8FCD-2CC1AAC3C1B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07080C9A-246C-4F9F-8FCD-2CC1AAC3C1B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446C4A88-498F-4AFF-BB0B-89900FB31D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446C4A88-498F-4AFF-BB0B-89900FB31D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446C4A88-498F-4AFF-BB0B-89900FB31D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446C4A88-498F-4AFF-BB0B-89900FB31D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7662DDA4-106A-4D44-B3FC-42F9BF59C43A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7662DDA4-106A-4D44-B3FC-42F9BF59C43A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7662DDA4-106A-4D44-B3FC-42F9BF59C43A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7662DDA4-106A-4D44-B3FC-42F9BF59C43A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D2AD2F7D-C1E0-4C84-A2A4-6900CED15599} = {E2FE2C50-39F6-4E9E-AD68-2733B2D0CE4D}
+		{817C1B83-0CAC-4345-A0BE-5CCF30B15C26} = {E2FE2C50-39F6-4E9E-AD68-2733B2D0CE4D}
+		{D6F1EC1A-CE1D-4E6D-B61D-07033DD442BE} = {E2FE2C50-39F6-4E9E-AD68-2733B2D0CE4D}
+		{6776DF76-1054-486C-A79A-57100C47032F} = {8C7C417F-4A19-4C7B-9D4E-53B1ED0C694C}
+		{6BFF827D-5D68-41F0-BE27-E6FB6697DCF3} = {DE86CB0E-334E-45F2-A0A3-11DFE4ECC2F9}
+		{07080C9A-246C-4F9F-8FCD-2CC1AAC3C1B5} = {DE86CB0E-334E-45F2-A0A3-11DFE4ECC2F9}
+		{7662DDA4-106A-4D44-B3FC-42F9BF59C43A} = {B3935EAD-8F14-4D22-A7F6-5AC62A794902}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B5A26C9-68C1-49D9-9F32-AF907A1730C2}
