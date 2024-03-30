@@ -9,7 +9,7 @@ using Mc2.CrudTest.Domain.Entities;
 
 namespace Mc2.CrudTest.Application.Features.Commands
 {
-    internal class CreateProductCommand : IFeatureCommand
+    public class CreateCustomerCommand : IFeatureCommand
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -18,16 +18,16 @@ namespace Mc2.CrudTest.Application.Features.Commands
         public string Email { get; set; }
         public long BankAccountNumber { get; set; }
 
-        public class CreateProductCommandHandler
+        public class CreateCustomerCommandHandler
         {
             private readonly IApplicationContext _context;
 
-            public CreateProductCommandHandler(IApplicationContext context)
+            public CreateCustomerCommandHandler(IApplicationContext context)
             {
                 _context = context;
             }
 
-            public async Task<int> Handle(CreateProductCommand request)
+            public async Task<int> Handle(CreateCustomerCommand request)
             {
                 var customer = new Customer
                 {

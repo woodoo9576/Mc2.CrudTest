@@ -9,13 +9,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mc2.CrudTest.Application.Features.Queries
 {
-    internal class GetAllCustomersQuery : IFeatureCommand
+    public class GetAllCustomersQuery : IFeatureCommand
     {
-        public class GetAllProductsQueryHandler
+        public class GetAllCustomersQueryHandler
         {
             private readonly IApplicationContext _context;
 
-            public GetAllProductsQueryHandler(IApplicationContext context)
+            public GetAllCustomersQueryHandler(IApplicationContext context)
             {
                 _context = context;
             }

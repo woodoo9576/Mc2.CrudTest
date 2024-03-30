@@ -19,6 +19,11 @@ namespace Mc2.CrudTest.DataBase
             set => _customers = value;
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source=:memory:");
+        }
+
         public async Task<int> SaveChanges()
         {
             return await base.SaveChangesAsync();
