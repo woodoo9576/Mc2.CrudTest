@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Mc2.CrudTest.Domain.Abstract;
-using Mc2.CrudTest.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Mc2.CrudTest.Tests
 {
+    using Domain.Abstract;
+    using Domain.Entities;
     internal class ApplicationContext : DbContext, IApplicationContext
     {
         public ApplicationContext(DbContextOptions options) : base(options)

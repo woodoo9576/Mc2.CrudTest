@@ -1,11 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Mc2.CrudTest.Domain.Abstract
+namespace Mc2.CrudTest.Domain.Abstract;
+using Entities;
+public interface IApplicationContext
 {
-    using Entities;
-    public interface IApplicationContext
-    {
-        DbSet<Customer> Customers { get; set; } 
-        Task<int> SaveChanges();
-    }
+    DbSet<Customer> Customers { get; set; }
+    Task<int> SaveChanges();
 }

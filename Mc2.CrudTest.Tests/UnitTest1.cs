@@ -1,12 +1,12 @@
 using FluentAssertions;
-using Mc2.CrudTest.Application.Features.Commands;
-using Mc2.CrudTest.Application.Features.Queries;
-using Mc2.CrudTest.Domain.Abstract;
-using Mc2.CrudTest.Domain.Entities;
 
 
 namespace Mc2.CrudTest.Tests
 {
+    using Application.Features.Commands;
+    using Application.Features.Queries;
+    using Domain.Abstract;
+    using Domain.Entities;
     public class Tests
     {
         private IApplicationContext beforeTestSetupContext(Action<IApplicationContext> action = null)

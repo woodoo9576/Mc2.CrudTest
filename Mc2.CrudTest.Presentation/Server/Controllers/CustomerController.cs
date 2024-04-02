@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Mc2.CrudTest.Application.Features.Commands;
-using Mc2.CrudTest.Application.Features.Queries;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 
 namespace Mc2.CrudTest.Presentation.Server.Controllers
 {
+    using Application.Features.Commands;
+    using Application.Features.Queries;
     [ApiController]
     [Route("[controller]")]
     public class CustomerController : Controller

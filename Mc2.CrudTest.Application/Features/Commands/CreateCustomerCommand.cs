@@ -1,49 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Mc2.CrudTest.Application.Features.Queries;
-using Mc2.CrudTest.Domain.Abstract;
-using Mc2.CrudTest.Domain.Entities;
+﻿using Mc2.CrudTest.Application.Features.Queries;
 
-namespace Mc2.CrudTest.Application.Features.Commands
+namespace Mc2.CrudTest.Application.Features.Commands;
+using Domain.Abstract;
+using Domain.Entities;
+public class CreateCustomerCommand : IFeatureCommand
 {
-    public class CreateCustomerCommand : IFeatureCommand
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public DateTime DateOfBirth { get; set; }
+    public long PhoneNumber { get; set; }
+    public string Email { get; set; }
+    public long BankAccountNumber { get; set; }
+
+    public class CreateCustomerCommandHandler
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public long PhoneNumber { get; set; }
-        public string Email { get; set; }
-        public long BankAccountNumber { get; set; }
+        private readonly IApplicationContext _context;
 
-        public class CreateCustomerCommandHandler
+        public CreateCustomerCommandHandler(IApplicationContext context)
         {
-            private readonly IApplicationContext _context;
+            _context = context;
+        }
 
-            public CreateCustomerCommandHandler(IApplicationContext context)
+        public async Task<int> Handle(CreateCustomerCommand request)
+        {
+            Customer customer = new Customer
             {
-                _context = context;
-            }
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                DateOfBirth = request.DateOfBirth,
+                PhoneNumber = request.PhoneNumber,
+                Email = request.Email,
+                BankAccountNumber = request.BankAccountNumber
+            };
 
-            public async Task<int> Handle(CreateCustomerCommand request)
-            {
-                var customer = new Customer
-                {
-                    FirstName = request.FirstName,
-                    LastName = request.LastName,
-                    DateOfBirth = request.DateOfBirth,
-                    PhoneNumber = request.PhoneNumber,
-                    Email = request.Email,
-                    BankAccountNumber = request.BankAccountNumber
-                };
-
-                _context.Customers.Add(customer);
-                 await _context.SaveChanges();
-                 return customer.Id;
-            }
+            _context.Customers.Add(customer);
+            await _context.SaveChanges();
+            return customer.Id;
         }
     }
-    
 }
