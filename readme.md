@@ -1,5 +1,5 @@
 # CRUD Code Test 
-
+<!--
 Please read each note very carefully!
 Feel free to add/change the project structure to a clean architecture to your view.
 and if you are not able to work on the FrontEnd project, you can add a Swagger UI
@@ -7,6 +7,7 @@ in a new Front project.
 
 Create a simple CRUD application with .NET that implements the below model:
 ```
+-->
 Customer {
 	FirstName
 	LastName
