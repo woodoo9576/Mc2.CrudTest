@@ -11,7 +11,8 @@ public class ApplicationContext : DbContext, IApplicationContext
 
     public DbSet<Customer> Customers { get; set; }
 
-    public async Task<int> SaveChanges()
+    /// <inheritdoc />
+    public new async Task<int> SaveChanges()
     {
         return await base.SaveChangesAsync();
     }
@@ -25,6 +26,7 @@ public class ApplicationContext : DbContext, IApplicationContext
     {
         m.Entity<Customer>().HasKey(x => x.Id);
 
+        // ReSharper disable once InvalidXmlDocComment
         /// Code-First Multi Column Unique Index 
         m.Entity<Customer>().HasIndex(c => new { c.FirstName, c.LastName, c.DateOfBirth }).IsUnique();
     }
